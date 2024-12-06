@@ -1,0 +1,1 @@
+export const GET_HOMEDATA_API_URL='/api/paas-home?populate[banner][populate][image]=*&populate[solutions][populate]=accordian_data&populate[solutions][populate]=Image'
