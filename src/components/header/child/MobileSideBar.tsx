@@ -15,6 +15,7 @@ const MobileSideBar = () => {
                 {
                     NAV_LINKS.map((item,i)=>(
                         <li  
+                        key={i}
                         role="presentation"
                         className="">
                            <span className='cursor-pointer font-sora text-[16px]  hover:text-gray-300/60 transition-colors duration-500 hover:transition-colors hover:duration-500'>
