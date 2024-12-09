@@ -6,7 +6,7 @@ body {
 
   background-color: #1a1a1a;
   color: #ffffff;
-  font-family: Arial, sans-serif;
+  font-family:Arial, sans-serif;
   margin: 0;
   padding: 0;
   display: flex;
@@ -127,4 +127,14 @@ body {
   .responsiveWidth {
     max-width: 800px;
   }
+}
+
+body:has(.move-page-left) {
+  transform: translateX(-100%) !important;
+  transition: all 500ms;
+}
+
+body:has(.move-page-right) {
+  transform: translateX(100%) !important;
+  transition: all 500ms;
 }

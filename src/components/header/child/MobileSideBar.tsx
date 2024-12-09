@@ -1,7 +1,8 @@
 import { Sheet, SheetContent, SheetTitle, SheetTrigger } from '@/components/ui/sheet'
 import { Menu } from 'lucide-react'
 import React from 'react'
-import { NAV_LINKS } from '../constants'
+import { BASE_APP_URL, NAV_LINKS } from '../constants'
+
 
 const MobileSideBar = () => {
   return (
@@ -18,9 +19,11 @@ const MobileSideBar = () => {
                         key={i}
                         role="presentation"
                         className="">
-                           <span className='cursor-pointer font-sora text-[16px]  hover:text-gray-300/60 transition-colors duration-500 hover:transition-colors hover:duration-500'>
+                           <a 
+                           href={`${BASE_APP_URL}${item.link}`}
+                           className='cursor-pointer font-sora text-[16px]  hover:text-gray-300/60 transition-colors duration-500 hover:transition-colors hover:duration-500'>
                            {item.name}
-                           </span>
+                           </a>
                         </li>
                     ))
                 }

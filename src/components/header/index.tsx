@@ -2,28 +2,33 @@ import React from "react";
 import PaddedLayout from "../wrapper/PaddedLayout";
 import Image from "next/image";
 import Logo from "../../../public/assets/logo/senaLogo.svg";
-import { BASE_APP_URL, NAV_LINKS } from "./constants";
+
 import SenaBotIcon from "./child/SenaBotIcon";
 import MobileSideBar from "./child/MobileSideBar";
-import Link from "next/link";
+import { BASE_APP_URL, NAV_LINKS } from "./constants";
+
 
 const Header = () => {
   return (
     <header className="w-full">
       <PaddedLayout className="sm:pt-5">
         <nav className="flex sm:min-h-[50px] sm:flex items-center justify-between py-6 px-[15px] sm:py-7 sm:px-4 mb-4 md:px-10 lg:px-20 sm:bg-black rounded-[25px] w-full">
-          <div className="flex justify-start w-1/3 sm:hidden">
+          {/* <div className="flex justify-start w-1/3 sm:hidden">
             <SenaBotIcon />
-          </div>
+          </div> */}
           <div
             role="presentation"
-            className="flex justify-center w-1/3 sm:w-fit sm:block flex-1"
+            className="flex justify-center w-fit"
           >
+            <a
+            href={`${BASE_APP_URL}`}
+            >
             <Image
               alt="logo"
               src={Logo}
               className="w-[100px] md:w-[110px] h-auto cursor-pointer"
             />
+            </a>
           </div>
 
           <ul className="sm:flex justify-end text-nowrap space-x-5 lg:space-x-9 text-white hidden">

@@ -1,13 +1,14 @@
 import { FooterLink } from "./type";
 
+export const BASE_APP_URL=process.env.NEXT_PUBLIC_APP_URL
 export const FOOTER_LINKS:FooterLink[]=[
     {
         name:'Terms and Conditions',
-        link:'/'
+        link:'termsAndConditions'
     },
     {
-        name:' Privacy Policy',
-        link:'/'
+        name:'Privacy Policy',
+        link:'PrivacyPolicy'
     }
 ]
 

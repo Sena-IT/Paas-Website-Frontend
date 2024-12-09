@@ -1,7 +1,8 @@
 import React from 'react'
 import PaddedLayout from '../wrapper/PaddedLayout'
 import Link from 'next/link'
-import { FOOTER_COMPANY_AND_YEAR, FOOTER_LINKS } from './constants'
+import { BASE_APP_URL, FOOTER_COMPANY_AND_YEAR, FOOTER_LINKS } from './constants'
+
 
 const Footer = () => {
   return (
@@ -20,9 +21,10 @@ const Footer = () => {
                 <div className="text-center w-1/2 text-white md:w-1/3 space-x-5 md:space-x-8 font-sora font-normal text-[12px] md:text-[16px] lg:leading-[20.16px]"
                 key={i}
                 >
-                    <Link href={item.link} className="cursor-pointer">
+                    <a href={`${BASE_APP_URL}${item.link}`}
+                    className="cursor-pointer">
                       {item.name}
-                    </Link>
+                    </a>
                 </div>
                 ))
               }
