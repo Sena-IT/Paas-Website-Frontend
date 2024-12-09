@@ -18,7 +18,7 @@ const Header = () => {
           </div> */}
           <div
             role="presentation"
-            className="flex justify-center w-fit"
+            className="flex justify-center items-center w-fit"
           >
             <a
             href={`${BASE_APP_URL}`}
